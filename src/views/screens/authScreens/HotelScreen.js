@@ -10,6 +10,7 @@ export default function Hotelscreen() {
     const openUrl = async (url) => {
         const isSupported = await Linking.canOpenURL(url);
         if (isSupported) {
+            Alert.alert("This is not a property of Touris19")
             await Linking.openURL(url);
         } else {
             Alert.alert("Don't kow how to open this url: ${url}");
@@ -20,7 +21,7 @@ export default function Hotelscreen() {
     return (
         <View   style = {{height: 200, width:'100%', backgroundColor:'pink'}}>
             <ImageBackground
-                    source = {require("../../../assets/location1.jpg")}
+                    source = {require("../../../assets/Hotel.jpg")}
                     style = {styles.images}
                     >
                          <Text
@@ -28,7 +29,9 @@ export default function Hotelscreen() {
                          > Book A Hotel</Text>
                     </ImageBackground>
 
-                    <Text style = {{fontSize:20, marginTop: 30}}>
+                    <Text style = {{fontSize:20, marginTop: 30, lineHeight: 25}}>
+                       After a long stressful day, you will definitely need a place to 
+                       lay your head and relax. 
                         Book A Hotel Via booking.com
                     </Text>
                     

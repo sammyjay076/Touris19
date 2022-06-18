@@ -20,7 +20,7 @@ export default function TaxiScreen() {
     return (
         <View   style = {{height: 200, width:'100%', backgroundColor:'pink'}}>
             <ImageBackground
-                    source = {require("../../../assets/location1.jpg")}
+                    source = {require("../../../assets/Taxi.jpg")}
                     style = {styles.images}
                     >
                          <Text
@@ -54,7 +54,7 @@ export default function TaxiScreen() {
                     <TouchableOpacity 
                     onPress =  {() => {openUrl (url1)}}
                     >
-                        <Text>Book your hotel now</Text>
+                        <Text>Order A Ride Now</Text>
                     </TouchableOpacity>
                     </View>
                    

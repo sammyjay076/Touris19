@@ -1,9 +1,10 @@
 import React, {useState, useRef} from "react";
 import COLORS, { colours, paramerters, title } from '../../consts/colors';
-import {View, Alert, Linking, StyleSheet, Text, Dimensions, TextInput, TouchableOpacity} from "react-native"
+import {View, SafeAreaView, Alert, Linking, StyleSheet, Text, Dimensions, TextInput, TouchableOpacity, StatusBar} from "react-native"
 // import {Icon, SocialIcon, Button} from "react-native-elements"
 import Header from "../../components/Header";
 import * as Animatable from "react-native-animatable";
+// import { SafeAreaView } from "react-native-safe-area-context";
 
 
 
@@ -29,11 +30,15 @@ export function SignInScreen ({navigation}) {
     const textInput2 = useRef(2)
 
     return (
+        <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
+             <StatusBar translucent={false} backgroundColor={COLORS.primary} />
         <View style= {styles.container}>
+                  
                  
         
 
      <View>
+     {/* <StatusBar translucent backgroundColor="rgba(0,0,0,0)" /> */}
 
          <Text style = {title}>
              Sign-In
@@ -126,36 +131,38 @@ export function SignInScreen ({navigation}) {
                     // title = "SIGN IN"
                     style = {paramerters.styledButton}
                     // Style = {paramerters.buttonTitle}
-                    onPress = {() =>{navigation.navigate('')}}
+                    onPress = {() =>{navigation.navigate('CreateAccountScreen')}}
+
                     >
                             <Text style={paramerters.buttonTitle}>create an account</Text>
                     </TouchableOpacity>
                 </View>
         </View>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container : {
         flex: 1,
-        marginTop:40,
-        backgroundColor: COLORS.primary
+        // marginTop:40,
+        backgroundColor: '#ded0ab'
     },
 
     text1: {
-        color: colours.grey4,
+        color: 'black',
         fontSize: 16,
     },
 
     text2: {
-        color: colours.grey4,
+        color: 'black',
         fontSize: 16,
         justifyContent:'flex-start'
     },
     
     TextInput1: {
         borderWidth:1,
-        borderColor: "#86939e",
+        borderColor: "black",
         marginHorizontal:20,
         borderRadius:12, 
         marginBottom:20,
@@ -167,13 +174,14 @@ const styles = StyleSheet.create({
         borderWidth:1, 
         borderRadius:12, 
         marginHorizontal:20,
-        borderColor: "#86939e",
+        borderColor: "black",
         flexDirection: "row",
         justifyContent: "space-between",
         alignContent: "center",
         alignItems: "center",
         height: 45,
         paddingLeft: 15,
+        color: 'black',
     },
 
     social: {

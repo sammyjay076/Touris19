@@ -20,14 +20,15 @@ export default function OnBoardScreen({navigation}) {
         source={require('../../assets/onboardImage.jpg')}>
         <View style={style.details}>
           <Text style={{color: COLORS.white, fontSize: 35, fontWeight: 'bold'}}>
-            Discover
+            Explore
           </Text>
           <Text style={{color: COLORS.white, fontSize: 35, fontWeight: 'bold'}}>
-            world with us
+            Ghana with us
           </Text>
           <Text style={{color: COLORS.white, lineHeight: 25, marginTop: 15}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut
-            sem non erat vehicula dignissim. Morbi eget congue ante, feugiat.
+            Ghana, a West African country has a lot to offer you in terms of Tourism. 
+            Roam the streets of the Cities in Ghana and find expore the amazing sights in 
+            the country
           </Text>
           <TouchableOpacity
             activeOpacity={0.8}

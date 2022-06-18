@@ -20,7 +20,7 @@ export default function FlightScreen() {
     return (
         <View   style = {{height: 200, width:'100%', backgroundColor:'pink'}}>
             <ImageBackground
-                    source = {require("../../../assets/location1.jpg")}
+                    source = {require("../../../assets/Flight.jpg")}
                     style = {styles.images}
                     >
                          <Text

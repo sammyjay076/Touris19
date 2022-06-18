@@ -24,7 +24,7 @@ export default function BookingsScreen({navigation})  {
                     onPress = {() =>{navigation.navigate('HotelScreen')}}
                     >
                     <View
-                    style = {{height: 200, marginTop:40, width:'100%', backgroundColor:'pink'}}>
+                    style = {{height: 200, marginTop:40, width:'100%', backgroundColor:'pink',}}>
                         <ImageBackground
                     source = {require("../../assets/Hotel.jpg")}
                     style = {styles.images}
@@ -119,6 +119,9 @@ const styles = StyleSheet.create({
     
     images : {
         height : '100%',
+        borderRadius:'100%'
+
+
     },
     
     Text: {

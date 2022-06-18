@@ -19,6 +19,8 @@ import Hotelscreen from './src/views/screens/authScreens/HotelScreen';
 import TaxiScreen from './src/views/screens/authScreens/TaxiScreen';
 import RestaurantScreen from './src/views/screens/authScreens/RestaurantScreen';
 import FlightScreen from './src/views/screens/authScreens/FlightScreen';
+import CreateAccountScreen from './src/views/screens/CreateAccountScreen';
+
 
 const Stack = createStackNavigator();
 
@@ -89,7 +91,9 @@ const App = () => {
         <Stack.Screen name="TaxiScreen" component={TaxiScreen} />
         <Stack.Screen name="RestaurantScreen" component={RestaurantScreen} />
         <Stack.Screen name="FlightScreen" component={FlightScreen} />
-     
+        <Stack.Screen name="SettingsScreeen" component={SettingsScreen} />
+        <Stack.Screen name="CreateAccountScreen" component={CreateAccountScreen} />
+       
       </Stack.Navigator>
     </NavigationContainer>
   );

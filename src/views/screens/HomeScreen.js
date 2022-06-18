@@ -16,11 +16,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { colours, paramerters, title } from '../../consts/colors';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 import places from '../../consts/places';
 import BookingsScreen from './BookingsScreen';
 const {width} = Dimensions.get('screen');
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 const HomeScreen = ({navigation}) => {
  
   
@@ -156,7 +159,7 @@ const HomeScreen = ({navigation}) => {
           </View>
         </View>
         <ListCategories />
-        <View style= {{marginHorizontal:20, marginTop:20,}}>
+        {/* <View style= {{marginHorizontal:20, marginTop:20,}}>
                     <TouchableOpacity 
                     // title = "SIGN IN"
                     style = {paramerters.styledButton}
@@ -165,7 +168,7 @@ const HomeScreen = ({navigation}) => {
                     >
                             <Text style={paramerters.buttonTitle}>Bookings</Text>
                     </TouchableOpacity>
-                </View>
+                </View> */}
         <Text style={style.sectionTitle}>Places</Text>
         <View>
           <FlatList
@@ -196,6 +199,27 @@ const HomeScreen = ({navigation}) => {
                     </TouchableOpacity>
                 </View> */}
       </ScrollView>
+
+      <View style={{height:45, backgroundColor:COLORS.primary,justifyContent:'space-between', alignItems:'center',  flexDirection:'row', alignContent:'space-between'}}>
+      
+      <TouchableOpacity style={{marginLeft:20}}>
+      <Icon name="place" size={28} color={COLORS.white} />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+      onPress = {() =>{navigation.navigate('BookingsScreen')}}
+      style={{marginLeft:20,alignContent:'space-between'}}>
+      <AntDesign name="pluscircle" size={28} color={COLORS.white} />
+      </TouchableOpacity>
+    
+      <TouchableOpacity style={{marginRight:20, alignItems:'center'}}>
+      <Icon name="place" size={28} color={COLORS.white} />
+      </TouchableOpacity>
+    
+     
+    
+      
+      </View>
     </SafeAreaView>
   );
 };
